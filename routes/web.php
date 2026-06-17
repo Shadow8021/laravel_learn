@@ -13,7 +13,9 @@ Route::get('/', function () {
     3=>["noms"=>"oko", "email"=>"oko@gmail.fr","age"=>"19"],
 ];
 
-Route::get('/users/{id}',function($id) use($users){
-   
-return $users[$id];
-});
+Route::get('/users/{id}/{name}',function($id,$name) use($users){
+    return ($users[$id]);
+  
+
+}
+);
