@@ -19,3 +19,18 @@ Route::get('/users/{id}/{name}',function($id,$name) use($users){
 
 }
 );
+
+Route::get('/momo',function(){
+    return view('momo');
+}
+);
+
+Route::prefix("user")->group(function(){
+    Route::get("/userA",function(){
+        return "userAAAA";
+    });
+    Route::get("/userB",function () {
+        return "userBBB";
+    });
+});
+
