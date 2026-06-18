@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use Illuminate\Contracts\Support\Responsable;
 use App\Http\Controllers\userController;
-
+use App\Http\Controllers\coursController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -40,3 +40,15 @@ Route::prefix("user")->group(function(){
 
 Route::get("users", [userController::class,'users']
 );
+Route::get("cours",[coursController::class,'index']);
+
+Route::prefix('formation')->group(function(){
+    Route::get("cyber/{form}",function($form){
+        return $form;
+    });
+    Route::get('reseau/{form}',function($form){
+        return $form;
+    });
+
+
+});
