@@ -45,10 +45,10 @@ Route::get("cours",[coursController::class,'index']);
 Route::prefix('formation')->group(function(){
     Route::get("cyber/{form}",function($form){
         return $form;
-    });
+    })->name("cyber Route");
     Route::get('reseau/{form}',function($form){
         return $form;
-    });
+    })->name('reseau Route');
 
 
 });
