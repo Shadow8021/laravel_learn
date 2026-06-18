@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use Illuminate\Contracts\Support\Responsable;
@@ -22,10 +22,13 @@ Route::get('/users/{id}/{name}',function($id,$name) use($users){
 }
 );
 
-Route::get('/momo',function(){
-    return view('momo');
+Route::get('/momo',function(Request $Request){
+    return [
+        "name"=>$Request->query("info"),
+        
+    ];
 }
-)->name('shadow');
+);
 
 Route::prefix("user")->group(function(){
     Route::get("/userA",function(){
