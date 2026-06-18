@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use Illuminate\Contracts\Support\Responsable;
+use App\Http\Controllers\userController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -23,14 +25,18 @@ Route::get('/users/{id}/{name}',function($id,$name) use($users){
 Route::get('/momo',function(){
     return view('momo');
 }
-);
+)->name('shadow');
 
 Route::prefix("user")->group(function(){
     Route::get("/userA",function(){
         return "userAAAA";
-    });
+    })->name("userAAAAA");
     Route::get("/userB",function () {
         return "userBBB";
-    });
+    })->name("userBBB");
 });
 
+
+
+Route::get("users", [userController::class,'users']
+);
