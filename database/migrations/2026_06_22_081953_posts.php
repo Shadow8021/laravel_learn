@@ -6,15 +6,16 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
- 
+    /**
+     * Run the migrations.
+     */
     public function up(): void
     {
-        Schema::create('eleves',function(Blueprint $table){
+        //
+        Schema::create('posts',function(Blueprint $table){
             $table->id();
-            $table->string('nom');
-            $table->string('email');
-            $table->enum('status',['nouveau','ancien']);
-    
+            $table->string('titre');
+            $table->string('description');
         });
     }
 
