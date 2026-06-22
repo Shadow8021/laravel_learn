@@ -8,11 +8,6 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('contact.index');
 });
 
-
-Route::get('/add',[eleveController::class,'index']);
-
-Route::get('/livre', [livreController::class,'index']);
-Route::get('/posts',[postController::class,'index']);
