@@ -9,7 +9,8 @@ class postController extends Controller
 {
     //
     public function index(){
-        $post = post::where("id",'>','22')->get();
+        $id=1;
+        $post = post::whereBetween('id',['20', '22'])->get();
         return $post;
     }
 
