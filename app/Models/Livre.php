@@ -8,6 +8,6 @@ class Livre extends Model
 {
     //
     public $timestamps = false;
-    protected $fillable = ['nom','auteur'];
+    protected $fillable = ['auteur','titre'];
     protected $guarded = ['id'];
 }

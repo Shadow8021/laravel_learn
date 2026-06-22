@@ -9,9 +9,9 @@ class livreController extends Controller
 {
     //
     public function index(){
-        $livre = new Livre();
-        $livre->titre= 'la rivive de nobo';
-        $livre->auteur="matial";
-        $livre->save();
+        $livre = Livre::create([
+            'titre'=>"naruto",
+            'auteur'=>"bototo"
+        ]);
     }
 }
