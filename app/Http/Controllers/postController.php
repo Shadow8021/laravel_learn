@@ -9,7 +9,7 @@ class postController extends Controller
 {
     //
     public function index(){
-        $post = post::all(['id','titre']);
+        $post = post::where("id",'>','22')->get();
         return $post;
     }
 
