@@ -9,10 +9,8 @@ class postController extends Controller
 {
     //
     public function index(){
-        $post = new post();
-        $post->titre="post 1";
-        $post->description="post 1 description";
-        $post->save();
+        $post = post::all(['id','titre']);
         return $post;
     }
+
 }
