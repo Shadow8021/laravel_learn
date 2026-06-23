@@ -11,3 +11,6 @@ Route::get('/', function () {
     return view('contact.index');
 });
 
+Route::get("/list",function(){
+    return 'test pratrique';
+});
