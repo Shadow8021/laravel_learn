@@ -8,9 +8,16 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('contact.index');
+    return view('home.index');
 });
 
-Route::get("/list",function(){
-    return 'test pratrique';
+Route::get("/about",function(){
+    return view('about.index');
+});
+
+Route::get('/contact',function(){
+    return view('contact.index');
+});
+Route::get('/blog',function(){
+    return view('blog.index');
 });
