@@ -3,7 +3,7 @@
 @section('title', 'acceuil de la page')
 
 @section("content")
-<div>
+<div >
     <p>Bienvenue sur note site</p>
 </div>
 @endsection
